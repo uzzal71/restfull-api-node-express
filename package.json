@@ -1,0 +1,42 @@
+{
+  "name": "restful-api-node-express",
+  "version": "1.0.0",
+  "description": "Nodejs and Expressjs using create restful api",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./index.js --exec babel-node -e js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uzzal71/restful-api-node-express.git"
+  },
+  "keywords": [
+    "Nodejs",
+    "Expressjs",
+    "Mongoose",
+    "Nodemon",
+    "JSONWebToken",
+    "Bcrypt",
+    "Babel"
+  ],
+  "author": "Uzzal Kumar Roy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/uzzal71/restful-api-node-express/issues"
+  },
+  "homepage": "https://github.com/uzzal71/restful-api-node-express#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.20.0",
+    "dotenv": "^16.0.0",
+    "express": "^4.18.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.3.3",
+    "nodemon": "^2.0.16"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1"
+  }
+}
