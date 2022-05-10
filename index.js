@@ -2,6 +2,8 @@ import express from "express";
 import dotenv from "dotenv";
 import bodyParser from "body-parser";
 
+import { routes } from "./src/routes";
+
 const app = express();
 dotenv.config();
 const PORT = process.env.PORT || 3000;
@@ -13,8 +15,10 @@ app.use(bodyParser.json());
 // public or static file
 app.use(express.static('public'));
 
-app.get('/', (req, res) => {
-    res.status(200).json({ message: `Node & Express server is running on ${PORT}` });
+// Add all the routes to our Express server
+// exported from routes/index.js
+routes.forEach(route => {
+    app[route.method](route.path, route.handler);
 });
 
 app.listen(PORT, () => {
